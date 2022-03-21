@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetch20Pokemons } from "./components/store/pokemon-actions";
+import styles from "./App.module.css";
+import PokemonList from "./components/pokemonsList/PokemonList";
+import LoadingPage from "./components/Ui/loadingPage";
+import FilterSection from "./components/filterPokemons/filterSection";
+import DarkMode from "./components/Ui/DarkMode";
 
 function App() {
+  const dispatch = useDispatch();
+  const isFirstLoad = useSelector((state) => state.pokemonAddSlice.firstLoad);
+  const darkModeState = useSelector((state) => state.darkModeSlice.darkMode);
+  const darkModeClass = darkModeState ? styles.dark : "";
+
+  const loadPokemons = useCallback(
+    (offset = 0) => {
+      dispatch(fetch20Pokemons(offset));
+    },
+    [dispatch]
+  );
+  useEffect(() => {
+    loadPokemons();
+  }, [loadPokemons]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${styles.wrapper} ${darkModeClass} `}>
+      <DarkMode></DarkMode>
+      <FilterSection></FilterSection>
+      <PokemonList loadMore={loadPokemons}> </PokemonList>{" "}
+      {isFirstLoad && <LoadingPage> </LoadingPage>}{" "}
     </div>
   );
 }

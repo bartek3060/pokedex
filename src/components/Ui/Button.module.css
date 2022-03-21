@@ -1,0 +1,39 @@
+.button {
+    width: 30%;
+    height: 20%;
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 5vh 0;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid red;
+    margin-bottom: 2%;
+}
+
+.button:hover {
+    background-color: white;
+    border-color: red;
+    color: red;
+    transition: 0.1s;
+}
+
+.button.dark {
+    color: darkred;
+    background-color: black;
+
+    border: 1px solid #4d0d0d;
+}
+
+.button.dark:hover {
+    background-color: #4d0d0d;
+    border-color: black;
+    color: black;
+
+}

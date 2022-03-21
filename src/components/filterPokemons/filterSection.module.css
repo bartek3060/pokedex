@@ -1,0 +1,65 @@
+.filterSection {
+    width: 80vw;
+    height: 20vh;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-left: 10vw;
+
+    margin-bottom: 2vh;
+    position: relative;
+}
+
+.button {
+    left: 50%;
+    top: 40%;
+    width: 20%;
+    height: 30%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.filterSection.dark {
+
+    background-color: #333;
+    color: black
+}
+
+@media(max-width:950px) {
+    .filterSection {
+        width: 70vw;
+        border-radius: 25px;
+        margin-left: 15vw;
+        margin-bottom: 2vh;
+    }
+
+    .button {
+        top: 54%;
+        width: 40%;
+        height: 18%;
+    }
+}
+
+@media(max-width:650px) {
+    .filterSection {
+        width: 80vw;
+        border-radius: 25px;
+        margin-left: 10vw;
+        margin-bottom: 2vh;
+    }
+
+    .button {
+        top: 48%;
+        width: 40%;
+        height: 25%;
+        line-height: 25%;
+    }
+}
+
+@media(max-width:650px) {
+
+    .button {
+        font-size: 18px;
+    }
+}

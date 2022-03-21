@@ -1,0 +1,118 @@
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    width: 100%;
+}
+
+.pokeLi {
+    width: 20%;
+    height: 33.33%;
+    margin: 1% 1%;
+
+    border-radius: 15px;
+    padding: 1vh 1vh;
+    cursor: pointer;
+    border: #2C87D8 2px solid;
+    background-color: #2581D9;
+
+}
+
+.pokeLi:hover {
+    background-color: #4896df;
+    transition: 0.2s;
+    color: #ddd;
+}
+
+.pokeLi h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.pokeLi div {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+
+.pokeLi.dark {
+
+    border: darkgray 2px solid;
+    background-color: gray;
+
+}
+
+.pokeLi.dark:hover {
+    background-color: darkgray;
+    transition: 0.2s;
+    color: #444;
+}
+
+@media (max-width:1024px) {
+    .img {
+        height: 20vh;
+        width: 100%;
+
+    }
+
+    .pokeLi {
+        width: 35%;
+        margin: 3% 3%;
+        border-radius: 20px;
+    }
+
+    .pokeLi h3 {
+        font-size: 22px;
+    }
+
+    .pokeLi div {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:850px) {
+
+
+    .pokeLi {
+        width: 40%;
+
+    }
+
+    .pokeLi h3 {
+        font-size: 24px;
+    }
+
+    .pokeLi div {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:550px) {
+
+
+    .pokeLi h3 {
+        font-size: 20px;
+    }
+
+    .pokeLi div {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:450px) {
+
+
+    .img {
+        height: 25vh;
+    }
+
+    .pokeLi {
+        width: 80%;
+
+    }
+
+
+}
