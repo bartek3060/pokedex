@@ -1,5 +1,5 @@
 [[redirects]]
-from = "https://pokedex-app-bartek.netlify.app/pokeapi.co/api/v2/pokemon?limit=20&/*"
-to = "https:pokeapi.co/api/v2/pokemon?limit=20&offset=:offset"
-status = 200
-force = true
+ from = "https://pokedex-app-bartek.netlify.app/pokeapi.co/api/v2/pokemon?limit=20&/*"
+ to = "https:pokeapi.co/api/v2/pokemon?limit=20&offset=:offset"
+ status = 200
+ force = true
