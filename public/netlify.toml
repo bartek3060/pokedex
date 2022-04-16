@@ -1,0 +1,7 @@
+
+[[redirects]]
+ from = "https://pokedex-app-bartek.netlify.app/pokeapi.co/api/v2/pokemon?limit=20&/*"
+ to = "https:pokeapi.co/api/v2/pokemon?limit=20&offset=:offset"
+ status = 200
+ force = true
+>>>>>>> 4cfa63dc300e011ff13f0c5a0f5e460f664b52c7
